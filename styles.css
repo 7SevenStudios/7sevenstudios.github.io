@@ -49,16 +49,6 @@ html {
     font-style: normal;
 } 
 
-#background {
-
-    background-color: #00000041;
-    border: none;
-    padding: 0px; /*20px, 20px or just 20px*/
-    display: inline-block;
-
-    margin: auto;
-    width: 100%;
-  }
 
 #projects {
 
@@ -69,8 +59,8 @@ text-align: center;
 
 /* Style the navigation menu */
 .navbar {
-    width: 100%;
-    background-color: rgb(80, 80, 80);
+  width: 100%;
+    background-color: rgb(51, 51, 51);
     overflow: auto;
   }
   
@@ -82,7 +72,7 @@ text-align: center;
     text-decoration: none;
     font-size: 27px;
     font-family: 'Skranji';
-    width: 33%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    width: 29%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
     text-align: center; /* If you want the text to be centered */
   }
   
