@@ -36,15 +36,55 @@ html {
     line-height: 1.5; 
 } 
 
-#button {
+#background {
 
-  background-color: #777777; /* Green */
-  border: none;
-  color: rgb(255, 255, 255);
-  padding: 20px 32px;
-  text-align: center;
-  text-decoration: none;
-  font-family: 'Balsamiq Sans';
-  display: inline-block;
-  font-size: 25px;
-}
+    background-color: #00000041;
+    border: none;
+    padding: 20px; /*20px, 20px or just 20px*/
+    display: inline-block;
+
+    margin: auto;
+    width: 95%;
+  }
+
+
+
+/* Style the navigation menu */
+.navbar {
+    width: 100%;
+    background-color: rgb(80, 80, 80);
+    overflow: auto;
+  }
+  
+  /* Navigation links */
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Balsamiq Sans';
+    width: 30%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    text-align: center; /* If you want the text to be centered */
+  }
+  
+  /* Add a background color on mouse-over */
+  .navbar a:hover {
+    background-color: rgba(0, 0, 0, 0.24);
+  }
+  
+  /* Style the current/active link */
+  .navbar a.active {
+    background-color: #383838;
+  }
+  
+  /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left; /* If you want the text to be left-aligned on small screens */
+    }
+  }
+  
