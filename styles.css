@@ -46,18 +46,26 @@ html {
     font-size: 30px; 
     text-align: center;
     line-height: 1.5; 
+    font-style: normal;
 } 
 
 #background {
 
     background-color: #00000041;
     border: none;
-    padding: 20px; /*20px, 20px or just 20px*/
+    padding: 0px; /*20px, 20px or just 20px*/
     display: inline-block;
 
     margin: auto;
     width: 100%;
-}
+  }
+
+#projects {
+
+text-align: center;
+  }
+
+
 
 /* Style the navigation menu */
 .navbar {
