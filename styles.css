@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
 
 html {
     height: 100%;
@@ -9,7 +9,7 @@ html {
 #title{   
     background-color: #f7f7f700; 
     color: #ffffff; 
-    font-family: 'Balsamiq Sans'; 
+    font-family: 'Skranji'; 
     font-size: 55px; 
     text-align: center;
     line-height: 1; 
@@ -19,7 +19,7 @@ html {
 #subtitle{   
     background-color: #f7f7f700; 
     color: #ffffff; 
-    font-family: 'Balsamiq Sans'; 
+    font-family: 'Skranji'; 
     font-size: 42px; 
     text-align: center;
     line-height: 0; 
@@ -30,7 +30,7 @@ html {
     scroll-padding-block-start: 55;
     background-color: #f7f7f700; 
     color: #ffffff; 
-    font-family: 'Balsamiq Sans'; 
+    font-family: 'Skranji'; 
     font-size: 30px; 
     text-align: center;
     line-height: 1.5; 
@@ -44,7 +44,7 @@ html {
     display: inline-block;
 
     margin: auto;
-    width: 95%;
+    width: 100%;
   }
 
 
@@ -63,7 +63,7 @@ html {
     color: white;
     text-decoration: none;
     font-size: 17px;
-    font-family: 'Balsamiq Sans';
+    font-family: 'Skranji';
     width: 30%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
     text-align: center; /* If you want the text to be centered */
   }
