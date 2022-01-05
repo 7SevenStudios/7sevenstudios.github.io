@@ -59,7 +59,8 @@ html {
 
 /* Style the navigation menu */
 .navbar {
-    background-color: rgb(51, 51, 51);
+   width: 100%;
+    background-color: rgba(51, 51, 51, 0);
     overflow: auto;
   }
   
@@ -71,7 +72,7 @@ html {
     text-decoration: none;
     font-size: 27px;
     font-family: 'Skranji';
-    width: 33%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    width: 30.3%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
     text-align: center; /* If you want the text to be centered */
   }
   
@@ -82,7 +83,7 @@ html {
   
   /* Style the current/active link */
   .navbar a.active {
-    background-color: #383838;
+    background-color: #3a3a3a;
   }
   
   /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
@@ -90,7 +91,7 @@ html {
     .navbar a {
       float: left;
       display: block;
-      width: 50%;
+      width: 100%;
       text-align: center; /* If you want the text to be left-aligned on small screens */
     }
   }
