@@ -57,7 +57,7 @@ html {
 }
 
 .navbar {
-  width: 100%;
+  width: 99%;
   text-align: center;
   overflow: auto;
   padding-left: 1.5%
@@ -70,7 +70,7 @@ html {
     text-decoration: none;
     font-size: 27px;
     font-family: 'Skranji';
-    width: 30.3333%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    width: 30%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
   }
   
   .navbar a:hover {
