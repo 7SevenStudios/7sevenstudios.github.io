@@ -56,17 +56,13 @@ html {
   text-align: center;
 }
 
-
-
-/* Style the navigation menu */
 .navbar {
-    width: 105%;
-    text-align: center;
-    background-color: rgba(51, 51, 51, 0);
-    overflow:auto
+  width: 100%;
+  text-align: center;
+  overflow: auto;
+  padding-left: 1.5%
   }
   
-  /* Navigation links */
   .navbar a {
     float:left;
     padding: 12px;
@@ -74,20 +70,17 @@ html {
     text-decoration: none;
     font-size: 27px;
     font-family: 'Skranji';
-    width: 30%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    width: 30.3333%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
   }
   
-  /* Add a background color on mouse-over */
   .navbar a:hover {
     background-color: rgba(0, 0, 0, 0.24);
   }
   
-  /* Style the current/active link */
   .navbar a.active {
     background-color: #383838;
   }
   
-  /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
   @media screen and (max-width: 500px) {
     .navbar a {
       float:right;
