@@ -7,19 +7,6 @@
   font-family: 'Skranji';
 }
 
-#projects {
-
-    text-align: center;
-  }
-
-  
-#text2 {
-padding-left: 10px;
-text-size-adjust: 1;
-color:white;
-font-size: 30px;
-  }
-
 :root{
     /* ===== Colors ===== */
     --body-color: #282828;
