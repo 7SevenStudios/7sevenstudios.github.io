@@ -1,25 +1,81 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
+
     <link rel="stylesheet" href="styles.css">
-    <div class="html">
+    <div class="html">  
+<head>
+    
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
 
-<body id="socials">
+            <div class="image-text">
+                <img src="7SevenMini.png" style="width:60px;height:60px;">
 
-    <p id="title"> <u> 7Seven Studios </u> </p>
-    <p id="subtitle"> An Indie Developer</p>
 
-    <div class="navbar" id="background">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a class="active" href="socials.html">Socials</a>
+                <div class="text logo-text">
+                    <span class="name">7SevenStudios</span>
+                    <span class="profession">Indie Developer</span>
+                </div>
+            </div>
 
-    </div>
+            <img src="Chevron.png" class='bx bx-chevron-right toggle'></i>
+        </header>
 
-    <div class="#socials"> 
-        <p id="regtext"> Socials:</p>
-        
-    </div>
+        <div class="menu-bar">
+            
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="home.html">
+                            <img src="Home.png" style="width:40px;height:40px;">
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="projects.html">
+                            <img src="projects.png" style="width:40px;height:40px;">
+                            <span class="text nav-text">Projects</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="socials.html">
+                            <img src="socials.png" style="width:40px;height:40px;">
+                            <span class="text nav-text">Socials</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <div class="text">Socials</div>
+        <div class="text2">Coming soon!
+        </div>
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+    </script>
 
 </body>
-    
 </html>
