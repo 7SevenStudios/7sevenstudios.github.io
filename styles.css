@@ -4,7 +4,10 @@
 
 *{
   font-family: 'Skranji';
-  color: white;
+  color: rgb(21, 20, 20);
+
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
 }
 
 .ytbutton {
@@ -12,7 +15,11 @@
     border:rgb(123, 6, 6);
     border-style: groove;
     border-width: 8.5px;
-    color: white;
+    color: rgb(21, 20, 20);
+
+    -webkit-text-stroke-width: .6px;
+    -webkit-text-stroke-color: white;
+
     width: 150px;
 
     padding: 10px 22px;
@@ -27,7 +34,12 @@
     border:rgb(207, 21, 21);
     border-style: groove;
     border-width: 8.5px;
-    color: white;
+
+    color: rgb(21, 20, 20);
+
+    -webkit-text-stroke-width: .6px;
+    -webkit-text-stroke-color: white;
+
     width: 150px;
     padding: 10px 22px;
     text-align: center;
@@ -42,7 +54,12 @@
     border:rgb(98, 109, 224);
     border-style: groove;
     border-width: 8.5px;
-    color: white;
+
+    color: rgb(21, 20, 20);
+
+    -webkit-text-stroke-width: .6px;
+    -webkit-text-stroke-color: white;
+
     width: 150px;
     padding: 10px 22px;
     text-align: center;
@@ -82,22 +99,31 @@
 
 
 /*TEXT*/
+img {
+    border-radius: 4px;
+    padding: 5px;
+    width: 70px;
+  }
+
+
 #header {
-    font-size: 60px;
-    text-decoration: underline;
+    font-size: 50px;
     text-align: left;
-    margin-top: -15px;
+    margin-top: 15px;
+    display: flex;
+    align-items:center;
 }
 
-#header2 {
+#top-text {
+    overflow:inherit;
     font-size: 45px;
-    text-align: left;
-    margin-top: -20px;
+    margin-top: -15px;
+ margin-bottom: 15px;
+    text-align: center;
 }
 
 #maintext {
        font-size: 45px;
-    text-decoration: underline;
 
     margin-bottom: 15px;
        text-align: center;
