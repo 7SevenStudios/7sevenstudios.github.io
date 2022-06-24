@@ -10,8 +10,26 @@
   -webkit-text-stroke-color: white;
 }
 
+.textbutton {
+  background-color: #64050500; 
+  color: rgb(21, 20, 20);
+
+  -webkit-text-stroke-width: .6px;
+  -webkit-text-stroke-color: white;
+
+  width: 125px;
+
+  float: right;
+
+  padding-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .ytbutton {
-    background-color: #640505; /* Green */
+    background-color: #640505; 
     border:rgb(123, 6, 6);
     border-style: groove;
     border-width: 8.5px;
@@ -30,7 +48,7 @@
   }
 
   .itchbutton {
-    background-color: #ac3434; /* Green */
+    background-color: #ac3434; 
     border:rgb(207, 21, 21);
     border-style: groove;
     border-width: 8.5px;
@@ -50,7 +68,7 @@
   }
 
   .twitterbutton {
-    background-color: #5552e5; /* Green */
+    background-color: #5552e5;
     border:rgb(98, 109, 224);
     border-style: groove;
     border-width: 8.5px;
@@ -108,10 +126,8 @@ img {
 
 #header {
     font-size: 50px;
-    text-align: left;
-    margin-top: 15px;
-    display: flex;
-    align-items:center;
+    display:flex;
+    align-items:flex-end;
 }
 
 #top-text {
