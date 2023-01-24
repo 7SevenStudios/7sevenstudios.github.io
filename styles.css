@@ -36,7 +36,7 @@
     color: rgb(21, 20, 20);
 
     -webkit-text-stroke-width: .6px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: rgb(150, 1, 1);
 
     width: 150px;
 
@@ -56,7 +56,7 @@
     color: rgb(21, 20, 20);
 
     -webkit-text-stroke-width: .6px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: rgb(253, 253, 253);
 
     width: 150px;
     padding: 10px 22px;
@@ -76,7 +76,7 @@
     color: rgb(21, 20, 20);
 
     -webkit-text-stroke-width: .6px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: rgb(225, 139, 139);
 
     width: 150px;
     padding: 10px 22px;
@@ -96,7 +96,27 @@
     color: rgb(21, 20, 20);
 
     -webkit-text-stroke-width: .6px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: rgb(149, 149, 243);
+
+    width: 150px;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  .tiktokbutton {
+    background-color: #353636;
+    border:rgb(181, 14, 186);
+    border-style: groove;
+    border-width: 8.5px;
+
+    color: rgb(21, 20, 20);
+
+    -webkit-text-stroke-width: .6px;
+    -webkit-text-stroke-color: rgb(225, 39, 235);
 
     width: 150px;
     padding: 10px 22px;
@@ -160,7 +180,7 @@ img {
 }
 
 #maintext {
-  font-size: 45px;
+  font-size: 55px;
 
 margin-bottom: 15px;
   text-align: center;
