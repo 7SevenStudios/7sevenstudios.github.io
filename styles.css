@@ -4,18 +4,12 @@
 
 *{
   font-family: 'B612 Mono', monospace;
-  color: rgb(21, 20, 20);
-
-  -webkit-text-stroke-width: .5px;
-  -webkit-text-stroke-color: white;
+  color: rgb(247, 243, 243);
 }
 
 .textbutton {
   background-color: #64050500; 
-  color: rgb(21, 20, 20);
-
-  -webkit-text-stroke-width: .6px;
-  -webkit-text-stroke-color: white;
+  color: rgb(252, 248, 248);
 
   width: 125px;
 
@@ -33,10 +27,7 @@
     border:rgb(123, 6, 6);
     border-style: groove;
     border-width: 8.5px;
-    color: rgb(21, 20, 20);
-
-    -webkit-text-stroke-width: .6px;
-    -webkit-text-stroke-color: rgb(150, 1, 1);
+    color: rgb(252, 248, 248);
 
     width: 150px;
 
@@ -53,10 +44,7 @@
     border-style: groove;
     border-width: 8.5px;
 
-    color: rgb(21, 20, 20);
-
-    -webkit-text-stroke-width: .6px;
-    -webkit-text-stroke-color: rgb(253, 253, 253);
+    color: rgb(252, 248, 248);
 
     width: 150px;
     padding: 10px 22px;
@@ -73,10 +61,7 @@
     border-style: groove;
     border-width: 8.5px;
 
-    color: rgb(21, 20, 20);
-
-    -webkit-text-stroke-width: .6px;
-    -webkit-text-stroke-color: rgb(225, 139, 139);
+    color: rgb(252, 248, 248);
 
     width: 150px;
     padding: 10px 22px;
@@ -93,10 +78,7 @@
     border-style: groove;
     border-width: 8.5px;
 
-    color: rgb(21, 20, 20);
-
-    -webkit-text-stroke-width: .6px;
-    -webkit-text-stroke-color: rgb(149, 149, 243);
+    color: rgb(252, 248, 248);
 
     width: 150px;
     padding: 10px 22px;
@@ -113,10 +95,7 @@
     border-style: groove;
     border-width: 8.5px;
 
-    color: rgb(21, 20, 20);
-
-    -webkit-text-stroke-width: .6px;
-    -webkit-text-stroke-color: rgb(225, 39, 235);
+    color: rgb(252, 248, 248);
 
     width: 150px;
     padding: 10px 22px;
