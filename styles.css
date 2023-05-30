@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono&family=Balsamiq+Sans&display=swap');
 /*if you just pressed inspect element then welcome to my garbage code*/
 /*have fun experiencing pain as you continue to read through it lmao*/
 
 *{
-  font-family: 'Skranji';
+  font-family: 'B612 Mono', monospace;
   color: rgb(21, 20, 20);
 
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: .5px;
   -webkit-text-stroke-color: white;
 }
 
