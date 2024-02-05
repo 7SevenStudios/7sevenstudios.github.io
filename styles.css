@@ -64,7 +64,7 @@
     color: rgb(252, 248, 248);
 
     width: 150px;
-    padding: 10px 22px;
+    padding: 10px 26px;
     text-align: center;
     text-decoration: none;
     font-size: 18px;
@@ -73,15 +73,15 @@
   }
 
   .twitterbutton {
-    background-color: #5552e5;
-    border:rgb(98, 109, 224);
+    background-color: #151519;
+    border:rgb(85, 85, 86);
     border-style: groove;
     border-width: 8.5px;
 
     color: rgb(252, 248, 248);
 
     width: 150px;
-    padding: 10px 22px;
+    padding: 10px 16px;
     text-align: center;
     text-decoration: none;
     font-size: 18px;
@@ -158,14 +158,15 @@ img {
 }
 
 #maintext {
-  font-size: 55px;
+  font-size: 45px;
 
-margin-bottom: 15px;
+margin-bottom: 55px;
   text-align: center;
 }
 
 #maintext2 {
-  font-size: 32px;
+  font-size: 25px;
+  margin-bottom: 25px;
 
   text-align: center;
 }
