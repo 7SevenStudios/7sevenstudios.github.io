@@ -57,6 +57,23 @@
     text-decoration: none;
     font-size: 18px;
     margin-bottom: 20vh;
+  }
+
+  .instabutton {
+    background-color: rgb(176, 36, 155);
+    border:rgb(125, 37, 119);
+    border-style: groove;
+    border-width: 8.5px;
+
+    color: rgb(252, 248, 248);
+
+    width: 150px;
+
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 20vh;
 
   }
 
@@ -135,6 +152,13 @@ margin-bottom: 55px;
 
 #maintext2 {
   font-size: 25px;
+  margin-top: 25px;
+
+  text-align: center;
+}
+
+#bottomtext {
+  font-size: 12px;
   margin-top: 25px;
 
   text-align: center;
