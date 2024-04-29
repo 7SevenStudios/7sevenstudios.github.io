@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
+<link rel="stylesheet" href="styles.css">
+<div class="html">  
+<title>FP Ultimate Brawl</title>
+<div id="grad1"></div>
+
 <head>
 
   <meta name="google-adsense-account" content="ca-pub-2850962572603194">
@@ -17,6 +22,13 @@
           background-size:475vh;
       }
   </style>
+
+<body>
+  
+  <img id="header2" src="/7.png"></img>
+
+</body>
+
 </head>
 
 
@@ -29,21 +41,42 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+
+    <div id="maintext"> fp ultimate brawl </div>
+      
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+
+
+
+      <canvas id="unity-canvas" width=960 height=800 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
+
+      
+
       <div id="unity-warning"> </div>
       <div id="unity-footer">
+        
 
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">FP Ultimate</div>
+        <div id="unity-build-title">FP Ultimate Brawl</div>
+
+        
       </div>
+
+      
+    <div class="center">      
+      <img id="maintext" class="top" src="/playerOneControls.png" style="width: 12px; min-width: 210px;" </img>
+      <img id="maintext" class="top" src="/playerTwoControls.png" style="width: 12px; min-width: 210px;" </img> 
     </div>
+
+
+    </div>
+      
     <script>
 
       var container = document.querySelector("#unity-container");
@@ -119,7 +152,7 @@
         canvas.style.height = "600px";
       }
 
-      loadingBar.style.display = "block";
+      loadingBar.style.display = "";
 
       var script = document.createElement("script");
       script.src = loaderUrl;
@@ -141,5 +174,7 @@
       document.body.appendChild(script);
 
     </script>
+
+
   </body>
 </html>
