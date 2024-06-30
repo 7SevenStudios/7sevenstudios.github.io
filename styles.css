@@ -123,13 +123,13 @@ img {
 
 
 #titleTextWithGap{
-  margin-top: 12vh;
+  margin-top: 40vh;
   font-size: 45px;
   text-align: center;
 }
 
 #textBigGap{
-  margin-top: 20vh;
+  margin-top: 50vh;
   font-size: 45px;
   text-align: center;
 }
@@ -149,24 +149,15 @@ img {
 
 
 #maintext {
+  font-size: 35px;
   margin-top: 25px;
-  margin-bottom: -15px;
-  font-size: 45px;
+  margin-bottom: 15px;
 
-margin-bottom: 55px;
   text-align: center;
 }
 
 #maintext2 {
-  font-size: 25px;
-  margin-top: 25px;
-
-  text-align: center;
-}
-
-#bottomtext {
-  font-size: 15px;
-  margin-top: 25px;
+  font-size: 22px;
 
   text-align: center;
 }
