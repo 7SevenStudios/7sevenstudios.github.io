@@ -7,157 +7,50 @@
   color: rgb(247, 243, 243);
 }
 
-.ytbutton {
-    background-color: #640505; 
-    border:rgb(123, 6, 6);
-    border-style: groove;
-    border-width: 8.5px;
-    color: rgb(252, 248, 248);
-
-    width: 150px;
-
-    padding: 10px 16px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    cursor: pointer;
-    margin-bottom: 20vh;
-
-  }
-
-  .itchbutton {
-    background-color: #ac3434; 
-    border:rgb(207, 21, 21);
-    border-style: groove;
-    border-width: 8.5px;
-
-    color: rgb(252, 248, 248);
-
-    width: 150px;
-    padding: 10px 16px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    cursor: pointer;
-    margin-bottom: 20vh;
-  }
-
-  .twitterbutton {
-    background-color: #151519;
-    border:rgb(85, 85, 86);
-    border-style: groove;
-    border-width: 8.5px;
-
-    color: rgb(252, 248, 248);
-
-    width: 150px;
-
-    padding: 10px 16px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    margin-bottom: 20vh;
-  }
-
-  .instabutton {
-    background-color: rgb(176, 36, 155);
-    border:rgb(125, 37, 119);
-    border-style: groove;
-    border-width: 8.5px;
-
-    color: rgb(252, 248, 248);
-
-    width: 150px;
-
-    padding: 10px 16px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    margin-bottom: 20vh;
-
-  }
-
-  .center-button {
-    text-align: center;
-    padding-top: 25px;
-  }
-
-/*BACKGROUND*/
-#grad1 {
-    background-image: url("/b.png");
-    min-height: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    
+/*top bar*/
+.topnav {
+  background-color: #222222;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-/*TEXT*/
-img {
-  width: 90px;
-}
-
-.center {
+/*text decorations inside buttons*/
+.topnav a {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-
-.top {
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  margin:10px
-}
-
-.center2 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-
-#titleTextWithGap{
-  margin-top: 40vh;
-  font-size: 45px;
+  display: inline-block;
+  color: #c9c9c9;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-#textBigGap{
-  margin-top: 50vh;
-  font-size: 45px;
-  text-align: center;
+/* color when hovering*/
+.topnav a:hover {
+  background-color: #868282;
+  color: black;
 }
 
-#textGap{
-  margin-top: 28vh;
-  font-size: 45px;
-  text-align: center;
+/*color when selected*/
+.topnav a.active {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
 
-#textGapBottom{
-  margin-top: 3vh;
-  margin-bottom: 20vh;
-  font-size: 45px;
-  text-align: center;
+.topText{
+font-size: 30px;
+font-weight: bold;
 }
 
-
-#maintext {
-  font-size: 35px;
-  margin-top: 25px;
-  margin-bottom: 15px;
-
-  text-align: center;
+.boldedText{
+  font-size: 20px;
+  font-weight: bold;
 }
 
-#maintext2 {
-  font-size: 22px;
-
-  text-align: center;
-}
+.tableText{
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  }

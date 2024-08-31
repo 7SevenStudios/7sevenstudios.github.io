@@ -4,32 +4,216 @@
 <link rel="stylesheet" href="styles.css">
 <div class="html">  
 <title>7SevenStudios</title>
-<div id="grad1"></div>
 
-    <head>
+<style>
+    body{ /*bg*/
+        background-image: url(/b2.png);
+        background-repeat: repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size:475vh;
+    }
 
-        <meta name="google-adsense-account" content="ca-pub-2850962572603194">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850962572603194"
-        crossorigin="anonymous"></script>
+    .header {/*navbar*/
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            line-height: 3vh; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+    }
 
-        <style>
-            body{
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 0;
+        height: 100vh
+    }
 
-                background-image: url(/b2.png);
-                background-repeat: repeat;
-                background-position: center;
-                background-attachment: fixed;
-                background-size:475vh;
-            }
-        </style>
-    </head>
+    .text{
+        width:50%;
+        max-width: 900px;
+        text-align: center;
+
+        font-size: 20px;
+    }
+
+    .iframe-container { /*FP BRAWL IFRAME*/
+        width: 107%;
+        height: 660px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        margin: 0 auto; 
+        margin-left: -3.5%;
+        }
+    iframe {
+        width: 100%;
+        height: 900px;
+        border: none;
+        display: block;
+    }
+
+    .table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    }
+
+    table {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        table-layout: fixed;
+        text-align: center;
+    }
+
+    table, th, td {
+        width: 75%;
+        padding: 5px;
+        box-sizing: border-box;
+}
+</style>
 
     <body>
-        <img id="header2" src="/7.png"></img>
-        <div id="titleTextWithGap">student / developer / entrepreneur</div>
-        <div id="maintext2">pc releases & mobile games</div>
+        <div class="header">
+            <div class="topnav">
+                <a class="active" href="#home">Home</a>
+                <a href="#releases">Releases</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#fpbrawl">FP Brawl</a>
+                <a href="#socials">Socials</a>
+              </div>
+        </div>
 
-        <div class="center" >
+        <div class="container">
+            <div class="text" id="content">
+                
+            </div>
+        </div>
+
+        
+        <script>
+            // JavaScript to handle active class switching and content update
+            document.addEventListener("DOMContentLoaded", function() {
+                const links = document.querySelectorAll('.topnav a');
+                const content = document.getElementById('content');
+    
+                function updateActiveLinkAndContent(hash) {
+                    // Remove active class from all links
+                    links.forEach(link => link.classList.remove('active'));
+    
+                    // Find and set the active class for the current hash
+                    const activeLink = Array.from(links).find(link => link.getAttribute('href') === hash);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+    
+                    
+                    
+                    
+
+                    // Update content based on hash
+                    switch(hash) {
+                        case '#home':
+                            content.innerHTML = `
+                            <p><a class="topText">7Seven Studios</a></p>
+                            <p>I'm a 16 year old programmer and game developer from 
+                            <a class="boldedText">New York</a>.
+                            I've been working on numerous game projects since 2020 in 
+                            <a class="boldedText">Unity</a>, 
+                            where I've released numerous projects on itch.io and have submitted numerous projects to competitions. 
+                            Since 7Seven Studios is a single-person team, I've spent thousands of hours of time
+                            <a class="boldedText">coding in C#, creating hundreds of art assets</a>,
+                            and even 
+                            <a class="boldedText">composed some sound tracks and sound effects for my projects over the years</a>.
+                            Through the occasional project where I'm in a team, I've learned how to lead a team effectively, and how to use cloud data-management tools such as 
+                            <a class="boldedText">Plastic SCM</a> and <a class="boldedText">Git</a>.
+                            My current project involves 
+                            <a class="boldedText">steamworks networking</a>
+                            to create an original multiplayer party game, which I plan to release on steam sometime in the future.</p>
+                             `
+                            break;
+                        case '#releases':
+                            content.innerHTML = '<p>Check out our latest releases here.</p>';
+                            break;
+                        case '#portfolio':
+                            content.innerHTML = 
+                            `
+                            <div class="table-container">
+                            <table>
+                                <tr>
+                                    <td> <a class="tableText">Languages</a></td>
+                                    <td> <a class="tableText">Tools</a></td>
+                                    <td> <a class="tableText">Fields</a></td>
+                                </tr>
+                                <tr>
+                                    <td>C#</td>
+                                    <td>Unity</td>
+                                    <td>Game Design</td>
+                                </tr>
+                                <tr>
+                                    <td>HTML5</td>
+                                    <td>Godot</td>
+                                    <td>Gameplay</td>
+                                </tr>
+                                <tr>
+                                    <td>CSS</td>
+                                    <td>Aseprite</td>
+                                    <td>Scripting</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Blender</td>
+                                    <td>Programming</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Audacity</td>
+                                    <td>User Interface</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Git / Github</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                            `
+                            break;
+                        case '#fpbrawl':
+                            content.innerHTML = '<div class="iframe-container"> <iframe src="https://itch.io/embed-upload/11347093?color=333333" allowfullscreen></iframe></div>';
+                            break;
+                        case '#socials':
+                            content.innerHTML = '<p>Follow us on our social media channels!</p>';
+                            break;
+                    }
+                }
+                
+    
+                // Initialize the content and active link on page load
+                updateActiveLinkAndContent(window.location.hash || '#home');
+    
+                // Add event listeners to links for hash change
+                links.forEach(link => {
+                    link.addEventListener('click', function(event) {
+                        updateActiveLinkAndContent(this.getAttribute('href'));
+                    });
+                });
+    
+                // Update content if the hash changes (e.g., back button)
+                window.addEventListener('hashchange', () => {
+                    updateActiveLinkAndContent(window.location.hash);
+                });
+            });
+        </script>
+            
+        <!--<div class="center" >
 
             <img class="center" id="textBigGap" src="/toweringInfinityLogo.png" style="width: 12px; min-width: 200px;" </img>
 
@@ -52,11 +236,6 @@
 
 
 
-        <div id="textBigGap">FP Ultimate Brawl</div>
-        <img id="maintext" class="center" src="/fpscreen.png" style="width: 655px; min-width: 655px;" </img>
-
-            <div class="center-button"> 
-            <a href="https://7sevenstudios.github.io/fpUltimate.html"class="twitterbutton">PLAY NOW!</a></div>
 
             <div id="textBigGap">itch.io games</div>
             <iframe frameborder="0" src="https://itch.io/embed/1014936?dark=true" width="208" height="167"><a href="https://7sevenstudios.itch.io/3-minutes-deep">3 Minutes Deep by 7SevenStudios</a></iframe>
@@ -69,7 +248,7 @@
             <iframe frameborder="0" src="https://itch.io/embed/1153012?dark=true" width="208" height="167"><a href="https://7sevenstudios.itch.io/town-of-tinysville">Town of Tinysville by 7SevenStudios</a></iframe>
             <iframe frameborder="0" src="https://itch.io/embed/2793332?dark=true" width="208" height="167"><a href="https://7sevenstudios.itch.io/freds-floats">Fred's Floats by 7SevenStudios, ClawBoomGames</a></iframe>
             <iframe frameborder="0" src="https://itch.io/embed/2855700?dark=true" width="208" height="167"><a href="https://7sevenstudios.itch.io/board-game-2021-legacy-version">board game (2020 LEGACY VERSION) by 7SevenStudios</a></iframe>
-        <!--<div id="textGap">asset store</div>
+        <div id="textGap">asset store</div>
         <iframe class="center2" src="https://assetstore.unity.com/linkmaker/embed/package/275750/widget-wide" style="width:600px; height:130px; border:0px;"></iframe>
         
 
