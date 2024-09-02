@@ -7,6 +7,58 @@
   color: rgb(247, 243, 243);
 }
 
+.button {
+  width:80px;
+  height:80px;
+  line-height:80px;
+  border: 7px solid #f5f5f5;
+  border-radius: 50%;
+  text-align:center;
+  text-decoration:none;
+  margin-left: 23px;
+  margin-right: 23px;
+}
+
+.button:hover {
+  filter: brightness(60%);
+}
+
+.emailbutton{
+  background: url(/gmail.png);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(231, 231, 231);
+  border: 7px solid #d4d4d4;
+}
+
+.ytbutton{
+  background: url(/youtube_social_icon_red.png);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(201, 1, 1);
+  border: 7px solid #b90101;
+}
+
+.xbutton{
+  background: url(/logo-white.png);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(8, 8, 8);
+  border: 7px solid #000000;
+}
+
+.itchbutton{
+  background: url(/itchio-logo-textless-white.png);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fa5c5c;
+  border: 7px solid #e44343;
+}
+
 /*top bar*/
 .topnav {
   background-color: #222222;
@@ -14,6 +66,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 /*text decorations inside buttons*/
@@ -22,9 +75,11 @@
   display: inline-block;
   color: #c9c9c9;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 56px;
   text-decoration: none;
   font-size: 17px;
+  flex: 1 1 auto;
+  max-width: 90px;
 }
 
 /* color when hovering*/

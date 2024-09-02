@@ -11,7 +11,7 @@
         background-repeat: repeat;
         background-position: center;
         background-attachment: fixed;
-        background-size:475vh;
+        background-size:100vw;
     }
 
     .header {/*navbar*/
@@ -77,7 +77,8 @@
         width: 75%;
         padding: 5px;
         box-sizing: border-box;
-}
+    }
+
 </style>
 
     <body>
@@ -113,17 +114,13 @@
                     if (activeLink) {
                         activeLink.classList.add('active');
                     }
-    
-                    
-                    
-                    
 
                     // Update content based on hash
                     switch(hash) {
                         case '#home':
                             content.innerHTML = `
                             <p><a class="topText">7Seven Studios</a></p>
-                            <p>I'm a 16 year old programmer and game developer from 
+                            <p>I'm a highschool student and a programmer/game developer from
                             <a class="boldedText">New York</a>.
                             I've been working on numerous game projects since 2020 in 
                             <a class="boldedText">Unity</a>, 
@@ -165,22 +162,22 @@
                                 <tr>
                                     <td>CSS</td>
                                     <td>Aseprite</td>
-                                    <td>Scripting</td>
+                                    <td>Pixel Art</td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td>Blender</td>
-                                    <td>Programming</td>
+                                    <td>2D Animation</td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td>Audacity</td>
-                                    <td>User Interface</td>
+                                    <td>Programming</td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td>Git / Github</td>
-                                    <td></td>
+                                    <td>User Interface</td>
                                 </tr>
                             </table>
                         </div>
@@ -190,7 +187,16 @@
                             content.innerHTML = '<div class="iframe-container"> <iframe src="https://itch.io/embed-upload/11347093?color=333333" allowfullscreen></iframe></div>';
                             break;
                         case '#socials':
-                            content.innerHTML = '<p>Follow us on our social media channels!</p>';
+                            content.innerHTML = `
+                          <p><a class="topText">Contact</a></p>
+                            <p>You can find me on most social media platforms. Feel free to check out the content on my channel,
+                                although I focus more on my work than my videos, so there isn't much there.</p>
+
+                            <a href="mailto: 7.sevens.studios@gmail.com"> <button class="button emailbutton"> </button></a>
+                            <a href="https://www.youtube.com/channel/UCznG3BvnrdpHHKTfCdk4Zkw"> <button class="button ytbutton"> </button></a>
+                            <a href="https://x.com/7Seven_Studios"> <button class="button xbutton"> </button></a>
+                            <a href="https://7sevenstudios.itch.io/"> <button class="button itchbutton"> </button></a>`
+
                             break;
                     }
                 }
