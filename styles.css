@@ -15,8 +15,8 @@
   border-radius: 50%;
   text-align:center;
   text-decoration:none;
-  margin-left: 23px;
-  margin-right: 23px;
+  margin-left: 13px;
+  margin-right: 13px;
 }
 
 .button:hover {
@@ -59,6 +59,72 @@
   border: 7px solid #e44343;
 }
 
+.squarebutton {
+  width:240px;
+  height:190px;
+  border-radius: 20px;
+  margin:23px;
+}
+
+
+.humanconnectionbutton {
+  border: 7px solid #817a7a;
+  background: url(/img/thehumanconnectioin.png);
+  background-size: 230px;
+  background-position: center;
+
+}
+
+.fredsfloatsbutton {
+  border: 7px solid #df9090;
+  background: url(/img/fredsfloats.png);
+  background-size: 230px;
+  background-position: center;
+}
+
+.cavesofmadnessbutton {
+  border: 7px solid #8e95c1;
+  background: url(/img/townoftinysville.png);
+  background-size: 230px;
+  background-position: center;
+}
+
+.squarebutton:hover {
+  filter: brightness(85%);
+}
+
+.googleplayButton {
+  width:200px;
+  height:70px;
+  border-style: none;
+  background: url(/google-play-badge.png);
+  background-size: 230px;
+  background-position: center;
+}
+
+.googleplayButton:hover {
+  filter: brightness(155%);
+  filter: invert();
+
+}
+
+.appleButton {
+  width:200px;
+  height:72px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-style: none;
+  background: url(/appstorebadge.svg);
+  background-size: 180px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.appleButton:hover {
+  filter: brightness(155%);
+  filter: invert();
+}
+
 /*top bar*/
 .topnav {
   background-color: #222222;
@@ -74,10 +140,10 @@
   display: block;
   display: inline-block;
   color: #c9c9c9;
-  text-align: center;
-  padding: 14px 56px;
+  text-align: lef;
+  padding: 14px 54px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
   flex: 1 1 auto;
   max-width: 90px;
 }
