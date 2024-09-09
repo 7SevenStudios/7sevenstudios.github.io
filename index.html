@@ -6,12 +6,29 @@
 <title>7Seven Studios</title>
 
 <style>
-    body{ /*bg*/
+
+    html, body {
+        height: 100%; /* Ensure the body and html take up the full height */
+        margin: 0; /* Remove default margin */
+    }
+
+    body {
         background-image: url(/b2.png);
         background-repeat: repeat;
         background-position: center;
         background-attachment: fixed;
         background-size:100vw;
+    }
+
+    .body-main{ /*bg*/
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+    }
+
+    .body-fpbrawl{ /*bg*/
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
     }
 
     .header {/*navbar*/
@@ -28,10 +45,12 @@
 
     .container {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 0;
-        height: 100vh
+        flex-direction: column; /* Stack content vertically */
+        justify-content: center; /* Center content vertically within the container */
+        align-items: center; /* Center content horizontally within the container */
+        width: 100%; /* Full width of the viewport */
+        height: 100%; /* Full height of the viewport */
+        padding: 10px; /* Optional padding */
     }
 
     .text{
@@ -104,6 +123,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             const links = document.querySelectorAll('.topnav a');
             const content = document.getElementById('content');
+            const body = document.body;
 
             function updateActiveLinkAndContent(hash) {
                 // Remove active class from all links
@@ -115,6 +135,8 @@
                     activeLink.classList.add('active');
                 }
 
+                body.classList.remove('body-main', 'body-fpbrawl');
+
                 // Update content based on hash
                 switch(hash) {
                     case '#home':
@@ -124,17 +146,19 @@
                         <a class="boldedText">New York</a>.
                         I've been working on numerous game projects since 2020 in 
                         <a class="boldedText">Unity</a>, 
-                        where I've released numerous projects on itch.io and have submitted numerous projects to competitions. 
+                        some of which I've published on itch.io and have submitted some of the projects to competitions. 
                         Since 7Seven Studios is a single-person team, I've spent thousands of hours of time
                         <a class="boldedText">coding in C#, creating hundreds of art assets</a>,
                         and even 
                         <a class="boldedText">composed some sound tracks and sound effects for my projects over the years</a>.
-                        Through the occasional project where I'm in a team, I've learned how to lead a team effectively, and how to use cloud data-management tools such as 
+                        Occasionally, I've collaborated with another team on a game, where I've learned how to lead a team effectively, and how to use cloud data-management tools such as 
                         <a class="boldedText">Plastic SCM</a> and <a class="boldedText">Git</a>.
                         My current project involves 
                         <a class="boldedText">steamworks networking</a>
                         to create an original multiplayer party game, which I plan to release on steam sometime in the future.</p>
-                            `
+                        `
+
+                        body.classList.add('body-main');
                         break;
                     case '#releases':
                         content.innerHTML = 
@@ -156,7 +180,7 @@
                         <a href="https://apps.apple.com/us/app/towering-infinity/id6503718822"> <button class="appleButton"> </button></a>
                         
                         `
-                        
+                        body.classList.add('body-main');
                         break;
                     case '#portfolio':
                         content.innerHTML = 
@@ -208,9 +232,11 @@
                         </table>
                     </div>
                         `
+                        body.classList.add('body-main');
                         break;
                     case '#fpbrawl':
                         content.innerHTML = '<div class="iframe-container"> <iframe src="https://itch.io/embed-upload/11347093?color=333333" allowfullscreen></iframe></div>';
+                        body.classList.add('body-fpbrawl');
                         break;
                     case '#socials':
                         content.innerHTML = `
@@ -222,7 +248,7 @@
                         <a href="https://www.youtube.com/channel/UCznG3BvnrdpHHKTfCdk4Zkw"> <button class="button ytbutton"> </button></a>
                         <a href="https://x.com/7Seven_Studios"> <button class="button xbutton"> </button></a>
                         <a href="https://7sevenstudios.itch.io/"> <button class="button itchbutton"> </button></a>`
-
+                        body.classList.add('body-main');
                         break;
                 }
             }
