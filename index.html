@@ -1,58 +1,62 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
-<link rel="stylesheet" href="styles.css">
-<div class="html">  
-<title>7Seven Studios</title>
+<head></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7Seven Studios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
 <style>
-
-    html, body {
-        height: 100%; /* Ensure the body and html take up the full height */
-        margin: 0; /* Remove default margin */
-    }
-
     body {
         background-image: url(/b2.png);
         background-repeat: repeat;
         background-position: center;
         background-attachment: fixed;
-        background-size:100vw;
+        background-size:cover;
     }
 
     .body-main{ /*bg*/
         display: flex;
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .body-fpbrawl{ /*bg*/
+        justify-content: center;
+        align-items: center;
     }
 
-    .body-fpbrawl{ /*bg*/
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
+    /*header height, changed later */
+    :root {
+    --header-height: 60px;
     }
 
     .header {/*navbar*/
         width: 100%;
-        background-color: #333;
         color: white;
         text-align: center;
-        line-height: 3vh; 
         position: fixed;
         top: 0;
         left: 0;
         z-index: 1;
+        height: auto;
     }
 
+    /*all the stuff is in this*/
     .container {
+        align-items: center;
+        flex:1;
+        overflow-y: auto; /* Scroll vertically if content overflows */
         display: flex;
-        flex-direction: column; /* Stack content vertically */
-        justify-content: center; /* Center content vertically within the container */
-        align-items: center; /* Center content horizontally within the container */
-        width: 100%; /* Full width of the viewport */
-        height: 100%; /* Full height of the viewport */
-        padding: 10px; /* Optional padding */
+        flex-direction: column; /* Stack children vertically */
+        justify-content: flex-start; /* Align items to the top */
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
+    /*text for containers*/
     .text{
         width:100%;
         max-width: 900px;
@@ -69,7 +73,8 @@
         align-items: center;
         margin: 0 auto; 
         margin-left: -3.5%;
-        }
+    }
+
     iframe {
         width: 100%;
         height: 900px;
@@ -77,12 +82,13 @@
         display: block;
     }
 
+    /*skills table*/
     .table-container {
     width: 100%;
     display: flex;
     justify-content: center;
     }
-
+    /*skills table*/
     table {
         width: 100%;
         max-width: 900px;
@@ -91,13 +97,27 @@
         table-layout: fixed;
         text-align: center;
     }
-
+    /*skills table*/
     table, th, td {
         width: 75%;
         padding: 5px;
         box-sizing: border-box;
     }
 
+    .centered-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+        text-align: center;
+    }
+
+    .top-aligned-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        box-sizing: border-box;
+    }
 </style>
 
 <body>
@@ -108,24 +128,35 @@
             <a href="#portfolio">Portfolio</a>
             <a href="#fpbrawl">FP Brawl</a>
             <a href="#socials">Socials</a>
-            </div>
-    </div>
-
-    <div class="container">
-        <div class="text" id="content">
-            
         </div>
     </div>
 
-    
+    <div class="container">
+        <div class="text" id="content"></div>
+    </div>
+
     <script>
-        // JavaScript to handle active class switching and content update
+
         document.addEventListener("DOMContentLoaded", function() {
+            function updateContainerMargin() {
+                const header = document.querySelector('.header');
+                const headerHeight = header.offsetHeight;
+                const container = document.querySelector('.container');
+                container.style.marginTop = `${headerHeight}px`;
+            }
+
+            updateContainerMargin();
+            window.addEventListener('resize', updateContainerMargin);
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+
             const links = document.querySelectorAll('.topnav a');
             const content = document.getElementById('content');
-            const body = document.body;
+            const body = document.body; 
 
-            function updateActiveLinkAndContent(hash) {
+            function updateActiveLinkAndContent(hash) 
+            {                
                 // Remove active class from all links
                 links.forEach(link => link.classList.remove('active'));
 
@@ -135,14 +166,17 @@
                     activeLink.classList.add('active');
                 }
 
+                const container = document.querySelector('.container');
+
                 body.classList.remove('body-main', 'body-fpbrawl');
+                container.classList.remove('centered-content', 'top-aligned-content');
 
                 // Update content based on hash
                 switch(hash) {
                     case '#home':
                         content.innerHTML = `
                         <p><a class="topText">7Seven Studios</a></p>
-                        <p>I'm a highschool student and a programmer/game developer from
+                        <p>I'm a student and a programmer/game developer from
                         <a class="boldedText">New York</a>.
                         I've been working on numerous game projects since 2020 in 
                         <a class="boldedText">Unity</a>, 
@@ -155,11 +189,13 @@
                         <a class="boldedText">Plastic SCM</a> and <a class="boldedText">Git</a>.
                         My current project involves 
                         <a class="boldedText">steamworks networking</a>
-                        to create an original multiplayer party game, which I plan to release on steam sometime in the future.</p>
+                        to create an original multiplayer party game, which I plan to release on steam sometime in the future.</p
                         `
 
                         body.classList.add('body-main');
+                        container.classList.add('centered-content');
                         break;
+
                     case '#releases':
                         content.innerHTML = 
                         `
@@ -181,63 +217,69 @@
                         
                         `
                         body.classList.add('body-main');
+                        container.classList.add('top-aligned-content');
                         break;
+
                     case '#portfolio':
                         content.innerHTML = 
                         `
                         <p><a class="topText">Skills</a></p>
 
                         <div class="table-container">
-                        <table>
-                            <tr>
-                                <td> <a class="tableText">Languages</a></td>
-                                <td> <a class="tableText">Tools</a></td>
-                                <td> <a class="tableText">Fields</a></td>
-                            </tr>
-                            <tr>
-                                <td>C#</td>
-                                <td>Unity</td>
-                                <td>Game Design</td>
-                            </tr>
-                            <tr>
-                                <td>HTML5</td>
-                                <td>Godot</td>
-                                <td>Gameplay</td>
-                            </tr>
-                            <tr>
-                                <td>CSS</td>
-                                <td>Aseprite</td>
-                                <td>Pixel Art</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Blender</td>
-                                <td>2D Animation</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Audacity</td>
-                                <td>Programming</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Git / Github</td>
-                                <td>User Interface</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Visual Studio / VS Code</td>
-                                <td></td>
-                            </tr>
-                        </table>
-                    </div>
+                            <table>
+                                <tr>
+                                    <td> <a class="tableText">Languages</a></td>
+                                    <td> <a class="tableText">Tools</a></td>
+                                    <td> <a class="tableText">Fields</a></td>
+                                </tr>
+                                <tr>
+                                    <td>C#</td>
+                                    <td>Unity</td>
+                                    <td>Game Design</td>
+                                </tr>
+                                <tr>
+                                    <td>HTML5</td>
+                                    <td>Godot</td>
+                                    <td>Gameplay</td>
+                                </tr>
+                                <tr>
+                                    <td>CSS</td>
+                                    <td>Aseprite</td>
+                                    <td>Pixel Art</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Blender</td>
+                                    <td>2D Animation</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Audacity</td>
+                                    <td>Programming</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Git / Github</td>
+                                    <td>User Interface</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Visual Studio / VS Code</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
                         `
                         body.classList.add('body-main');
+                        container.classList.add('centered-content');
                         break;
+                        
                     case '#fpbrawl':
                         content.innerHTML = '<div class="iframe-container"> <iframe src="https://itch.io/embed-upload/11347093?color=333333" allowfullscreen></iframe></div>';
                         body.classList.add('body-fpbrawl');
+                        container.classList.add('centered-content');
                         break;
+                        
                     case '#socials':
                         content.innerHTML = `
                         <p><a class="topText">Contact</a></p>
@@ -249,57 +291,25 @@
                         <a href="https://x.com/7Seven_Studios"> <button class="button xbutton"> </button></a>
                         <a href="https://7sevenstudios.itch.io/"> <button class="button itchbutton"> </button></a>`
                         body.classList.add('body-main');
+                        container.classList.add('centered-content');
                         break;
                 }
             }
             
 
-            // Initialize the content and active link on page load
             updateActiveLinkAndContent(window.location.hash || '#home');
 
-            // Add event listeners to links for hash change
             links.forEach(link => {
                 link.addEventListener('click', function(event) {
                     updateActiveLinkAndContent(this.getAttribute('href'));
                 });
             });
 
-            // Update content if the hash changes (e.g., back button)
             window.addEventListener('hashchange', () => {
                 updateActiveLinkAndContent(window.location.hash);
             });
         });
     </script>
-        
-    <!--
-
-
-
-
-        <div id="textBigGap">itch.io games</div>
-        <iframe frameborder="0" src="https://itch.io/embed/1014936?dark=true" width="208" height="167"><a href="https://7sevenstudios.itch.io/3-minutes-deep">3 Minutes Deep by 7SevenStudios</a></iframe>
-        <iframe frameborder="0" src="https://itch.io/embed/1672667?dark=true" width="208" height="167"><a href="https://clawboomgames.itch.io/caves-of-madness">Caves of Madness by ClawBoomGames, 7SevenStudios</a></iframe>
-        <iframe frameborder="0" src="https://itch.io/embed/898566?dark=true" width="208" height="167"><a href="https://7sevenstudios.itch.io/delete">DELETE! by 7SevenStudios</a></iframe>
-        <iframe frameborder="0" src="https://itch.io/embed/938436?dark=true" width="208" height="167"><a href="https://7sevenstudios.itch.io/demosthenes-breen">Demosthenes Breen and the Semi-Electric Nectarine. by 7SevenStudios</a></iframe>
-        <iframe frameborder="0" src="https://itch.io/embed/1299979?dark=true" width="208" height="167"><a href="https://clawboomgames.itch.io/doorframe-oz">Doorframe OZ by ClawBoomGames, 7SevenStudios</a></iframe>
-        <iframe frameborder="0" src="https://itch.io/embed/1577839?dark=true" width="208" height="167"><a href="https://7sevenstudios.itch.io/the-human-connection">The Human Connection by 7SevenStudios, ClawBoomGames</a></iframe>
-        <iframe frameborder="0" src="https://itch.io/embed/821316?dark=true" width="208" height="167"><a href="https://7sevenstudios.itch.io/the-ultimate-rng-platformer-rpg-jam">The Ultimate RNG Platformer RPG (JAM VERSION) by 7SevenStudios</a></iframe>
-        <iframe frameborder="0" src="https://itch.io/embed/1153012?dark=true" width="208" height="167"><a href="https://7sevenstudios.itch.io/town-of-tinysville">Town of Tinysville by 7SevenStudios</a></iframe>
-        <iframe frameborder="0" src="https://itch.io/embed/2793332?dark=true" width="208" height="167"><a href="https://7sevenstudios.itch.io/freds-floats">Fred's Floats by 7SevenStudios, ClawBoomGames</a></iframe>
-        <iframe frameborder="0" src="https://itch.io/embed/2855700?dark=true" width="208" height="167"><a href="https://7sevenstudios.itch.io/board-game-2021-legacy-version">board game (2020 LEGACY VERSION) by 7SevenStudios</a></iframe>
-    <div id="textGap">asset store</div>
-    <iframe class="center2" src="https://assetstore.unity.com/linkmaker/embed/package/275750/widget-wide" style="width:600px; height:130px; border:0px;"></iframe>
-    
-
-
-    <div class="center" id="textGap">social</div>
-    <div class="center-button"> 
-        <a href="https://www.youtube.com/channel/UCznG3BvnrdpHHKTfCdk4Zkw"class="ytbutton">youtube</a>
-        <a href="https://twitter.com/7Seven_Studios"class="twitterbutton">X/twitter</a>
-        <a href="https://www.instagram.com/7.seven.studios/ "class="instabutton">instagram</a>
-
-    <div class="center" id="bottomtext">i make some pretty cool stuff, go check them out</div>
-    -->
 </body>
     
 </html>
