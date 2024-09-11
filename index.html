@@ -155,6 +155,24 @@
             const content = document.getElementById('content');
             const body = document.body; 
 
+
+             function updateAlignmentBasedOnOverflow() {
+                const content = document.getElementById('content');
+                const container = content.parentElement;
+
+                // Check if the content overflows its parent container
+                const isOverflowing = content.offsetHeight > container.clientHeight || content.offsetWidth > container.clientWidth;
+
+                if (isOverflowing) {
+                    container.classList.add('top-aligned-content');
+
+                } else {
+                    container.classList.add('centered-content');
+
+                }
+            }
+
+
             function updateActiveLinkAndContent(hash) 
             {                
                 // Remove active class from all links
@@ -217,7 +235,7 @@
                         
                         `
                         body.classList.add('body-main');
-                        container.classList.add('top-aligned-content');
+                        container.classList.add('centered-content');
                         break;
 
                     case '#portfolio':
