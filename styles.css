@@ -60,9 +60,10 @@
 }
 
 .squarebutton {
-  width:12vi;
-  height:9vi;
-  size: 24vb;
+  width:12vw;
+  height:9vw;
+  min-width: 120px;
+  min-height: 95px;
   max-width: 240px;
   max-height: 190px;
   border-radius: 20px;
@@ -107,6 +108,8 @@
   line-height:80px;
   width:12vi;
   height:12vi;
+  min-width: 100px;
+  min-height: 100px;
   max-width: 200px;
   max-height: 200px;
   border: .5vw solid #2b81b7;
@@ -184,7 +187,7 @@
 }
 
 .topText{
-  font-size: 2vw;
+  font-size: 2.4vw;
   font-weight: bold;
   }
 

@@ -90,8 +90,6 @@
             display: flex;
             flex-direction: column; /* Stack children vertically */
             justify-content: flex-start; /* Align items to the top */
-            padding-left: 25px;
-            padding-right: 25px;
         }
 
         /*text for containers*/
@@ -100,8 +98,8 @@
         }
 
         .text{
-            font-size: 1.35vw;
-            max-width: 50%;
+            font-size: 2.0vw;
+            max-width: 60%;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
@@ -157,6 +155,24 @@
             
             .header-right {
                 float: left;
+            }
+
+            .text{
+                font-size: 3.35vw;
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+
+            .topText{
+                font-size: 6vw;
+                font-weight: bold;
+            }
+
+            .subtitle{
+                font-size: 5vw;
+                font-weight: bold;
             }
         }
 
@@ -239,7 +255,7 @@
                 switch(hash) {
                     case '#home':
                         content.innerHTML = `
-                        <p><a class="topText">Student, Programming, Game Design.</a></p>
+                        <p><a class="topText">Student, Programmer, Game Designer.</a></p>
                         <div class="textcenter">C# Unity Game Developer</div>
                         `
 
