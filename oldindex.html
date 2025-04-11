@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7Seven Studios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    body {
+        background-image: url(/b2.png);
+        background-repeat: repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size:cover;
+    }
+
+    .body-main{ /*bg*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .body-fpbrawl{ /*bg*/
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*header height, changed later */
+    :root {
+    --header-height: 60px;
+    }
+
+    .header {/*navbar*/
+        width: 100%;
+        color: white;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: auto;
+    }
+
+    /*all the stuff is in this*/
+    .container {
+        align-items: center;
+        flex:1;
+        overflow-y: auto; /* Scroll vertically if content overflows */
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+        justify-content: flex-start; /* Align items to the top */
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    /*text for containers*/
+    .text{
+        width:100%;
+        max-width: 900px;
+        text-align: center;
+
+        font-size: 20px;
+    }
+
+    .iframe-container { /*FP BRAWL IFRAME*/
+        width: 107%;
+        height: 660px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        margin: 0 auto; 
+        margin-left: -3.5%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 900px;
+        border: none;
+        display: block;
+    }
+
+    /*skills table*/
+    .table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    }
+    /*skills table*/
+    table {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        table-layout: fixed;
+        text-align: center;
+    }
+    /*skills table*/
+    table, th, td {
+        width: 75%;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .centered-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+        text-align: center;
+    }
+
+    .top-aligned-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        box-sizing: border-box;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#releases">Projects</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#fpbrawl">FP Brawl</a>
+            <a href="#socials">Social</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text" id="content"></div>
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            function updateContainerMargin() {
+                const header = document.querySelector('.header');
+                const headerHeight = header.offsetHeight;
+                const container = document.querySelector('.container');
+                container.style.marginTop = `${headerHeight}px`;
+            }
+
+            updateContainerMargin();
+            window.addEventListener('resize', updateContainerMargin);
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const links = document.querySelectorAll('.topnav a');
+            const content = document.getElementById('content');
+            const body = document.body; 
+
+
+             function updateAlignmentBasedOnOverflow() {
+                const content = document.getElementById('content');
+                const container = content.parentElement;
+
+                // Check if the content overflows its parent container
+                const isOverflowing = content.offsetHeight > container.clientHeight || content.offsetWidth > container.clientWidth;
+
+                if (isOverflowing) {
+                    container.classList.add('top-aligned-content');
+
+                } else {
+                    container.classList.add('centered-content');
+
+                }
+            }
+
+
+            function updateActiveLinkAndContent(hash) 
+            {                
+                // Remove active class from all links
+                links.forEach(link => link.classList.remove('active'));
+
+                // Find and set the active class for the current hash
+                const activeLink = Array.from(links).find(link => link.getAttribute('href') === hash);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+
+                const container = document.querySelector('.container');
+
+                body.classList.remove('body-main', 'body-fpbrawl');
+                container.classList.remove('centered-content', 'top-aligned-content');
+
+                // Update content based on hash
+                switch(hash) {
+                    case '#home':
+                        content.innerHTML = `
+                        <p><a class="topText">7Seven Studios</a></p>
+                        <p>Student / Programmer / Game Developer from New York. <br> <br>
+                        I've been making games in Unity and publishing them on my itch.io page.
+                        Most notably was Doorframe OZ, placing #4 out of 8,000 participants in the 2021 Github Game-Off. <br> <br>
+                        Since 2020, I've spend thousands of hours coding in C#, hand-drawing hundreds of art assets, making sound effects,
+                        and producing and composing sound tracks. <br> <br>
+                        
+                        My current project, GameBOX, is an immersive retro-themed collection of party games that can be 
+                        played with up to 8 friends! Release date on Steam TBD.
+                        `
+
+                        body.classList.add('body-main');
+                        container.classList.add('centered-content');
+                        break;
+
+                    case '#releases':
+                        content.innerHTML = 
+                        `
+                         <p><a class="topText">Web Releases</a></p>
+                        <p>Check out some of my most popular web games with over 6,000+ plays and 250+ downloads.</p>
+
+                        <a href="https://7sevenstudios.itch.io/the-human-connection"> <button class="squarebutton humanconnectionbutton"> </button></a>
+                        <a href="https://7sevenstudios.itch.io/freds-floats"> <button class="squarebutton fredsfloatsbutton"> </button></a>
+                        <a href="https://7sevenstudios.itch.io/town-of-tinysville"> <button class="squarebutton cavesofmadnessbutton"> </button></a>
+                        
+                        <p><a class="topText">Towering Infinity</a></p>
+                        <p>A small hypercasual mobile game I worked on for some time</p>
+
+                        <p><a> <button class="toweringInfinityDisplay"> </button></a></p>
+                        
+                    
+                        <a href="https://play.google.com/store/apps/details?id=com.Seven7Studios.ToweringInfinity"> <button class="googleplayButton"> </button></a>
+                        <a href="https://apps.apple.com/us/app/towering-infinity/id6503718822"> <button class="appleButton"> </button></a>
+                        
+                        `
+                        body.classList.add('body-main');
+                        container.classList.add('centered-content');
+                        break;
+
+                    case '#portfolio':
+                        content.innerHTML = 
+                        `
+                        <p><a class="topText">Skills</a></p>
+
+                        <div class="table-container">
+                            <table>
+                                <tr>
+                                    <td> <a class="tableText">Languages</a></td>
+                                    <td> <a class="tableText">Tools</a></td>
+                                    <td> <a class="tableText">Fields</a></td>
+                                </tr>
+                                <tr>
+                                    <td>C#</td>
+                                    <td>Unity</td>
+                                    <td>Game Design</td>
+                                </tr>
+                                <tr>
+                                    <td>Java</td>
+                                    <td>Godot</td>
+                                    <td>Gameplay</td>
+                                </tr>
+                                <tr>
+                                    <td>HTML5</td>
+                                    <td>Aseprite</td>
+                                    <td>Pixel Art</td>
+                                </tr>
+                                <tr>
+                                    <td>CSS</td>
+                                    <td>Git / Github</td>
+                                    <td>2D Animation</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>VS / VS Code</td>
+                                    <td>Programming</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>User Interface</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        `
+                        body.classList.add('body-main');
+                        container.classList.add('centered-content');
+                        break;
+                        
+                    case '#fpbrawl':
+                        content.innerHTML = `
+                        <p><a class="topText">Fordham Prep Ultimate Brawl</a></p>
+                        <p>Sponsored by Fordham Preparatory School in the Bronx, NY. Expect bugs and unimplemented attacks. This game is a work in progress</p>
+                        <div class="iframe-container"> <iframe src="https://itch.io/embed-upload/13326838?color=333333" allowfullscreen></iframe></div>`;
+                        body.classList.add('body-fpbrawl');
+                        container.classList.add('centered-content');
+                        break;
+                        
+                    case '#socials':
+                        content.innerHTML = `
+                        <p><a class="topText">Contact</a></p>
+                        <p>You can find me on most social media platforms. Feel free to check out the content on my channel,
+                            although I focus more on my work than my videos, so there isn't much there.</p>
+
+                        <a href="mailto: 7.sevens.studios@gmail.com"> <button class="button emailbutton"> </button></a>
+                        <a href="https://www.youtube.com/channel/UCznG3BvnrdpHHKTfCdk4Zkw"> <button class="button ytbutton"> </button></a>
+                        <a href="https://x.com/7Seven_Studios"> <button class="button xbutton"> </button></a>
+                        <a href="https://7sevenstudios.itch.io/"> <button class="button itchbutton"> </button></a>`
+                        body.classList.add('body-main');
+                        container.classList.add('centered-content');
+                        break;
+                }
+            }
+            
+
+            updateActiveLinkAndContent(window.location.hash || '#home');
+
+            links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    updateActiveLinkAndContent(this.getAttribute('href'));
+                });
+            });
+
+            window.addEventListener('hashchange', () => {
+                updateActiveLinkAndContent(window.location.hash);
+            });
+        });
+    </script>
+</body>
+    
+</html>

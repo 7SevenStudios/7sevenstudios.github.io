@@ -1,133 +1,179 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
 
-<head></head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7Seven Studios</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7Seven Studios</title>
+<link rel="stylesheet" href="styles.css">
 
-<style>
-    body {
-        background-image: url(/b2.png);
-        background-repeat: repeat;
-        background-position: center;
-        background-attachment: fixed;
-        background-size:cover;
-    }
-
-    .body-main{ /*bg*/
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+<html>
     
-    .body-fpbrawl{ /*bg*/
-        justify-content: center;
-        align-items: center;
-    }
+<style>
 
-    /*header height, changed later */
-    :root {
-    --header-height: 60px;
-    }
+        /*this is the nice code*/
+        * {box-sizing: border-box;}
 
-    .header {/*navbar*/
-        width: 100%;
-        color: white;
-        text-align: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        height: auto;
-    }
+        body {
+            background-image: url(/b2.png);
+            background-repeat: repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size:cover;
+        } 
+            
+        .header {
+            overflow: hidden;
+            background-color: #222222;
+            padding: 20px 10px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
 
-    /*all the stuff is in this*/
-    .container {
-        align-items: center;
-        flex:1;
-        overflow-y: auto; /* Scroll vertically if content overflows */
-        display: flex;
-        flex-direction: column; /* Stack children vertically */
-        justify-content: flex-start; /* Align items to the top */
-        padding-left: 25px;
-        padding-right: 25px;
-    }
+        .header a {
+            float: left;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px; 
+            line-height: 25px;
+            border-radius: 4px;
+            padding-right: 2vw;
+            padding-left: 2vw;
+        }
 
-    /*text for containers*/
-    .text{
-        width:100%;
-        max-width: 900px;
-        text-align: center;
+        .header i {
+            float: left;
+            color: rgb(255, 255, 255);
+            padding-right: 2vw;
+            padding-left: 2vw;
+            padding-top: 3px;
+        }
 
-        font-size: 20px;
-    }
+        .header a:hover {
+            background-color: #939393;
+            color: rgb(26, 26, 26);
+        }
 
-    .iframe-container { /*FP BRAWL IFRAME*/
-        width: 107%;
-        height: 660px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        margin: 0 auto; 
-        margin-left: -3.5%;
-    }
+        .header a.active {
+            font-weight: bold;
+            color: white;
+        }
 
-    iframe {
-        width: 100%;
-        height: 900px;
-        border: none;
-        display: block;
-    }
+        .header-right {
+            float: right;   
+        }
 
-    /*skills table*/
-    .table-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    }
-    /*skills table*/
-    table {
-        width: 100%;
-        max-width: 900px;
-        margin: 0 auto;
-        border-collapse: collapse;
-        table-layout: fixed;
-        text-align: center;
-    }
-    /*skills table*/
-    table, th, td {
-        width: 75%;
-        padding: 5px;
-        box-sizing: border-box;
-    }
+        /*i gotta clean this up in the future*/
+        .body-main{ /*bg*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .body-fpbrawl{ /*bg*/
+            justify-content: center;
+            align-items: center;
+        }
 
-    .centered-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 90vh;
-        text-align: center;
-    }
+        /*header height, changed later */
+        :root {
+            --header-height: 60px;
+        }
 
-    .top-aligned-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        box-sizing: border-box;
-    }
+         /*all the stuff is in this*/
+        .container {
+            align-items: center;
+            flex:1;
+            overflow-y: auto; /* Scroll vertically if content overflows */
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            justify-content: flex-start; /* Align items to the top */
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        /*text for containers*/
+        .textjustify{
+            text-align: justify;
+        }
+
+        .text{
+            font-size: 1.35vw;
+            max-width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .iframe-container { /*FP BRAWL IFRAME*/
+            width: 104%;
+            height: 630px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            margin: 0 auto; 
+            margin-left: -2%;
+        }
+
+        iframe {
+            width: 100%;
+            height:900px;
+            border: none;
+            display: block;
+        }
+
+        .centered-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            text-align: center;
+        }
+
+        .top-aligned-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width: 720px) {
+            .header a {
+                display: block;
+                text-align: left;
+                float:left;
+
+                color: rgb(255, 255, 255);
+                padding: 12px;
+                text-decoration: none;
+                font-size: 18px; 
+                line-height: 25px;
+                border-radius: 4px;
+                padding-right: 2vw;
+                padding-left: 2vw;
+            }
+            
+            .header-right {
+                float: left;
+            }
+        }
+
 </style>
 
 <body>
+
     <div class="header">
-        <div class="topnav">
+        <i><img style="height:40px;" src="/7seven.png"></i>
+
+        <div class="header-right">
             <a class="active" href="#home">Home</a>
-            <a href="#releases">Projects</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#games">Games</a>
             <a href="#fpbrawl">FP Brawl</a>
-            <a href="#socials">Social</a>
+            <a href="#social">Social</a>
+            
         </div>
     </div>
 
@@ -151,7 +197,7 @@
 
         document.addEventListener("DOMContentLoaded", function() {
 
-            const links = document.querySelectorAll('.topnav a');
+            const links = document.querySelectorAll('.header a');
             const content = document.getElementById('content');
             const body = document.body; 
 
@@ -193,94 +239,74 @@
                 switch(hash) {
                     case '#home':
                         content.innerHTML = `
-                        <p><a class="topText">7Seven Studios</a></p>
-                        <p>Student / Programmer / Game Developer from New York. <br> <br>
-                        I've been making games in Unity and publishing them on my itch.io page.
-                        Most notably was Doorframe OZ, placing #4 out of 8,000 participants in the 2021 Github Game-Off. <br> <br>
-                        Since 2020, I've spend thousands of hours coding in C#, hand-drawing hundreds of art assets, making sound effects,
-                        and producing and composing sound tracks. <br> <br>
-                        
-                        My current project, GameBOX, is an immersive retro-themed collection of party games that can be 
-                        played with up to 8 friends! Release date on Steam TBD.
+                        <p><a class="topText">Student, Programming, Game Design.</a></p>
+                        <div class="textcenter">C# Unity Game Developer</div>
                         `
 
                         body.classList.add('body-main');
                         container.classList.add('centered-content');
                         break;
 
-                    case '#releases':
+                    case '#about':
                         content.innerHTML = 
                         `
-                         <p><a class="topText">Web Releases</a></p>
-                        <p>Check out some of my most popular web games with over 6,000+ plays and 250+ downloads.</p>
+
+                        <p><a class="topText">Hi!</a></p>
+
+                        <div class="textjustify">
+                            I'm Lou from 7SevenStudios, a game enthusiast based in New York. Since I was 5 years old,
+                            I had an interest in video games and always wanted to make my own. I'm currently working on 
+                            GameBOX, an immersive retro-themed collection of party games that can be played with up to 8 
+                            friends! <br>Release date on Steam TBD.
+                        </div>
+                        <br>
+
+                        <p><a class="subtitle">Accolades</a></p>
+                        <div class="textjustify">
+                            <b> Github Gameoff 2021</b> [<a href="https://github.blog/open-source/gaming/top-entries-from-game-off-2021/">VIEW</a>]<br>
+                            In under a month, I was tasked with creating a full video game with the theme 'bug' and placed 4th out of 8,000 participants.
+                            This is how Doorframe OZ was born, a pseudo-simulation of a late 90's computer
+                            infected with a virus that has to be demolished out before your game crashes!<br>
+                        </div><br><br>
+                        
+                        <div class="textjustify">
+                            <b> Itch.io Games</b> [<a href="https://7sevenstudios.itch.io/">VIEW</a>]<br>
+                            Since 2020, I've participated in numerous game jams, and have published over 10 games
+                            on my  itch.io page. These games have over 6,000+ web plays and 300+ downloads. <br><br>
+                        </div>
+                        <br>
+
+                        <p><a class="subtitle">Languages</a></p>
+                        <div class="textcenter"> C#, Java, HTML, CSS, GDScript </div>
+
+                        <p><a class="subtitle">Tools</a></p>
+                        <div class="textcenter"> Unity, Godot, Aseprite, Git, Visual Studio </div>
+
+                        <p><a class="subtitle">Fields</a></p>
+                        <div class="textcenter"> Game Design, Pixel Art, 2D Animation, UI </div>
+                        `
+                        body.classList.add('body-main');
+                        container.classList.add('centered-content');
+                        break;
+
+                    case '#games':
+                        content.innerHTML = 
+                        `
+                            <p><a class="topText">Games</a> [<a href="https://7sevenstudios.itch.io/">VIEW ALL ></a>]</p>
+                        <div class="textjustify">Check out some of my most popular web games with over 6,000+ plays and 300+ downloads.</div>
 
                         <a href="https://7sevenstudios.itch.io/the-human-connection"> <button class="squarebutton humanconnectionbutton"> </button></a>
                         <a href="https://7sevenstudios.itch.io/freds-floats"> <button class="squarebutton fredsfloatsbutton"> </button></a>
                         <a href="https://7sevenstudios.itch.io/town-of-tinysville"> <button class="squarebutton cavesofmadnessbutton"> </button></a>
                         
                         <p><a class="topText">Towering Infinity</a></p>
-                        <p>A small hypercasual mobile game I worked on for some time</p>
+                        Now available on iOS and Android!
 
                         <p><a> <button class="toweringInfinityDisplay"> </button></a></p>
                         
                     
                         <a href="https://play.google.com/store/apps/details?id=com.Seven7Studios.ToweringInfinity"> <button class="googleplayButton"> </button></a>
-                        <a href="https://apps.apple.com/us/app/towering-infinity/id6503718822"> <button class="appleButton"> </button></a>
                         
-                        `
-                        body.classList.add('body-main');
-                        container.classList.add('centered-content');
-                        break;
-
-                    case '#portfolio':
-                        content.innerHTML = 
-                        `
-                        <p><a class="topText">Skills</a></p>
-
-                        <div class="table-container">
-                            <table>
-                                <tr>
-                                    <td> <a class="tableText">Languages</a></td>
-                                    <td> <a class="tableText">Tools</a></td>
-                                    <td> <a class="tableText">Fields</a></td>
-                                </tr>
-                                <tr>
-                                    <td>C#</td>
-                                    <td>Unity</td>
-                                    <td>Game Design</td>
-                                </tr>
-                                <tr>
-                                    <td>Java</td>
-                                    <td>Godot</td>
-                                    <td>Gameplay</td>
-                                </tr>
-                                <tr>
-                                    <td>HTML5</td>
-                                    <td>Aseprite</td>
-                                    <td>Pixel Art</td>
-                                </tr>
-                                <tr>
-                                    <td>CSS</td>
-                                    <td>Git / Github</td>
-                                    <td>2D Animation</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>VS / VS Code</td>
-                                    <td>Programming</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td>User Interface</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </table>
-                        </div>
                         `
                         body.classList.add('body-main');
                         container.classList.add('centered-content');
@@ -288,18 +314,18 @@
                         
                     case '#fpbrawl':
                         content.innerHTML = `
-                        <p><a class="topText">Fordham Prep Ultimate Brawl</a></p>
-                        <p>Sponsored by Fordham Preparatory School in the Bronx, NY. Expect bugs and unimplemented attacks. This game is a work in progress</p>
+                        <p><a class="topText">FP Ultimate Brawl</a></p>
+                        <div class="textjustify">Sponsored by Fordham Preparatory School in the Bronx, NY. Currently a work in progress.
                         <div class="iframe-container"> <iframe src="https://itch.io/embed-upload/13326838?color=333333" allowfullscreen></iframe></div>`;
                         body.classList.add('body-fpbrawl');
                         container.classList.add('centered-content');
                         break;
                         
-                    case '#socials':
+                    case '#social':
                         content.innerHTML = `
                         <p><a class="topText">Contact</a></p>
-                        <p>You can find me on most social media platforms. Feel free to check out the content on my channel,
-                            although I focus more on my work than my videos, so there isn't much there.</p>
+                        <div class="textjustify">You can find me on most social media platforms. Feel free to check out the content on my channel,
+                            although I focus more on my work than my videos, so there isn't much there.</div><br>
 
                         <a href="mailto: 7.sevens.studios@gmail.com"> <button class="button emailbutton"> </button></a>
                         <a href="https://www.youtube.com/channel/UCznG3BvnrdpHHKTfCdk4Zkw"> <button class="button ytbutton"> </button></a>
@@ -325,6 +351,6 @@
             });
         });
     </script>
-</body>
-    
+
+    </body>
 </html>
