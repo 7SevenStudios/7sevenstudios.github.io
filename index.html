@@ -63,6 +63,8 @@
 
         .header-right {
             float: right;   
+            padding-left: 1vw;
+            padding-right: 1vw;
         }
 
         /*i gotta clean this up in the future*/
@@ -98,8 +100,16 @@
         }
 
         .text{
-            font-size: 2.0vw;
-            max-width: 60%;
+            font-size: 1.5em;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        
+        .text2{
+            font-size: 1em;
+            width: 60%;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
@@ -116,8 +126,9 @@
         }
 
         iframe {
-            width: 100%;
+            width: 960px;
             height:900px;
+            margin: 0 auto; 
             border: none;
             display: block;
         }
@@ -140,39 +151,37 @@
         @media screen and (max-width: 720px) {
             .header a {
                 display: block;
-                text-align: left;
-                float:left;
-
                 color: rgb(255, 255, 255);
                 padding: 12px;
                 text-decoration: none;
-                font-size: 18px; 
+                font-size: 3vw; 
                 line-height: 25px;
+                margin: 0 auto;
                 border-radius: 4px;
-                padding-right: 2vw;
-                padding-left: 2vw;
             }
             
             .header-right {
                 float: left;
             }
 
+            .textjustify{
+                text-align: center;
+            }
+
             .text{
-                font-size: 3.35vw;
-                max-width: 100%;
+                font-size: 1.5em;
+                width: 90%;
                 margin-left: auto;
                 margin-right: auto;
                 text-align: center;
             }
-
-            .topText{
-                font-size: 6vw;
-                font-weight: bold;
-            }
-
-            .subtitle{
-                font-size: 5vw;
-                font-weight: bold;
+            
+            .text2{
+                font-size: 1em;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
             }
         }
 
@@ -256,7 +265,7 @@
                     case '#home':
                         content.innerHTML = `
                         <p><a class="topText">Student, Programmer, Game Designer.</a></p>
-                        <div class="textcenter">C# Unity Game Developer</div>
+                        <div class="text2">C# Unity Game Developer</div>
                         `
 
                         body.classList.add('body-main');
@@ -270,8 +279,7 @@
                         <p><a class="topText">Hi!</a></p>
 
                         <div class="textjustify">
-                            I'm Lou from 7SevenStudios, a game enthusiast based in New York. Since I was 5 years old,
-                            I had an interest in video games and always wanted to make my own. I'm currently working on 
+                            I'm Lou from 7SevenStudios, a game enthusiast based in New York. I'm currently working on 
                             GameBOX, an immersive retro-themed collection of party games that can be played with up to 8 
                             friends! <br>Release date on Steam TBD.
                         </div>
@@ -309,7 +317,7 @@
                         content.innerHTML = 
                         `
                             <p><a class="topText">Games</a> [<a href="https://7sevenstudios.itch.io/">VIEW ALL ></a>]</p>
-                        <div class="textjustify">Check out some of my most popular web games with over 6,000+ plays and 300+ downloads.</div>
+                        <div class="textcenter">Check out some of my most popular web games with over 6,000+ plays and 300+ downloads.</div>
 
                         <a href="https://7sevenstudios.itch.io/the-human-connection"> <button class="squarebutton humanconnectionbutton"> </button></a>
                         <a href="https://7sevenstudios.itch.io/freds-floats"> <button class="squarebutton fredsfloatsbutton"> </button></a>
@@ -331,8 +339,8 @@
                     case '#fpbrawl':
                         content.innerHTML = `
                         <p><a class="topText">FP Ultimate Brawl</a></p>
-                        <div class="textjustify">Sponsored by Fordham Preparatory School in the Bronx, NY. Currently a work in progress.
-                        <div class="iframe-container"> <iframe src="https://itch.io/embed-upload/13326838?color=333333" allowfullscreen></iframe></div>`;
+                        <div class="textcenter">Sponsored by Fordham Preparatory School in the Bronx, NY. Currently a work in progress. <br> [DOESN'T LOAD ON MOBILE DEVICES!]
+                        <div class="iframe-container"> <iframe src="https://itch.io/embed-upload/13360153?color=333333" allowfullscreen></iframe></div>`;
                         body.classList.add('body-fpbrawl');
                         container.classList.add('centered-content');
                         break;
