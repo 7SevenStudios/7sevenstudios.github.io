@@ -9,6 +9,10 @@
     
 <style>
 
+        html {
+        background-color: rgb(20, 19, 19);
+        }
+
         /*this is the nice code*/
         * {box-sizing: border-box;}
 
@@ -75,6 +79,7 @@
         }
         
         .body-fpbrawl{ /*bg*/
+            display: flex;
             justify-content: center;
             align-items: center;
         }
@@ -316,7 +321,7 @@
                     case '#games':
                         content.innerHTML = 
                         `
-                            <p><a class="topText">Games</a> [<a href="https://7sevenstudios.itch.io/">VIEW ALL ></a>]</p>
+                            <p><a class="topText">Games</a><br> [<a href="https://7sevenstudios.itch.io/">VIEW ALL ></a>]</p>
                         <div class="textcenter">Check out some of my most popular web games with over 6,000+ plays and 300+ downloads.</div>
 
                         <a href="https://7sevenstudios.itch.io/the-human-connection"> <button class="squarebutton humanconnectionbutton"> </button></a>
