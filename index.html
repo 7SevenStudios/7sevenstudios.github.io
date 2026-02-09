@@ -12,7 +12,7 @@
         * {box-sizing: border-box;}
 
         body {
-            background-image: url(/b2.png);
+            background-color: #1a1a1a;
             background-repeat: repeat;
             background-position: center;
             background-attachment: fixed;
@@ -26,7 +26,7 @@
             width: 100%;
             position: fixed;
             top: 0;
-            z-index: 1;
+            z-index: 2;
         }
 
         .header a {
@@ -108,7 +108,7 @@
         }
         
         .text2{
-            font-size: 1em;
+            font-size: 1.1em;
             width: 60%;
             margin-left: auto;
             margin-right: auto;
@@ -194,10 +194,9 @@
 
         <div class="header-right">
             <a class="active" href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#games">Games</a>
-            <a href="#fpbrawl">FP Brawl</a>
-            <a href="#social">Social</a>
+            <a href="#home">Tinysville</a>
+            <a href="#home">About</a>
+            <a href="#press-kit">Press Kit</a>
             
         </div>
     </div>
@@ -264,90 +263,123 @@
                 switch(hash) {
                     case '#home':
                         content.innerHTML = `
-                        <p><a class="topText">Student, Programmer, Game Designer.</a></p>
-                        <div class="text2">C# Unity Game Developer</div>
+                        <section class="hero">
+                            <div class="hero-overlay">
+
+                                <img 
+                                src= "/tinysville-logo.png";
+                                class="hero-logo"
+                                >
+
+                                <iframe 
+                                    class="trailer"
+                                    src="https://www.youtube.com/embed/mgS0jFTp9YY"
+                                    allowfullscreen>
+                                </iframe>
+
+                                <br>
+                                <a 
+                                href="https://store.steampowered.com/app/4264060/Town_of_Tinysville/"
+                                class="steam-cta"
+                                target="_blank"
+                                rel="noopener"
+                                >
+                                <img src="/steamlogo.png" alt="Steam" class="steam-icon">
+
+                                <span class="steam-divider"></span>
+
+                                <span class="steam-text">
+                                    <strong>Wishlist on Steam</strong><br>
+                                    Windows | Mac
+                                </span>
+                                </a>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <img 
+                                src= "/welcome.png";
+                                class="section-logo">
+
+                            <p>
+                                Town of Tinysville is a retro city builder about strategically placing buildings to maximize town funds. Discover unique landmarks, enact laws, and unlock new towns with new challenges to face!
+                            </p>
+                            <h2>Roguelike, Town Builder, Card Game</h2>
+                            <p>
+                                What happens when you combine a card-driven city-builder with a classic roguelike? A uniquely relaxing yet engaging retro-themed experience! Place buildings while managing your deck grid-space, available resources, beauty, and of course, town funds. Upset the delicate balance and you'll devastate your run. Will you be the ultimate city planner?
+                            </p>
+
+                            <h2>Features</h2>
+
+                            <p>
+                                    <i><b>Building Interactions</b></i> - Each building interacts with eachother in unique ways. Discover intricate building placements to make generate even more coins! Watch out for building debuffs!
+                                    <br>
+                                    <br>
+                                    <i><b>Unlimited Replayability</b></i>- Whenever you start a new run, your town is randomly generated. Each run offers a new challenges to overcome!
+                                    <br>
+                                    <br>
+                                    <i><b>Tons of New Challenges</b></i> - With over 12 towns and 7 difficulty levels each, there will always be more challenges to overcome.
+                                    <br>
+                                    <br>
+                                    <i><b>Collection</b></i> - Cards you discover in runs will stay unlocked forever! Can you complete your entire collection?
+                            </p>
+                        </section>
+
+                        <section class="section">
+                            <img 
+                                src= "/7sevenstudios.png";
+                                class="section-logo">
+
+                            <p>
+                                Hi there! I'm Lou, the founder of 7Seven Studios. I'm a high school student
+                                and game enthusiast in New York. I started developing in Unity six years ago in 2020
+                                and have released 11 games on my itch.io. It's always been my dream to release games
+                                to the world on the same level as the ones I grew up loving. Town of Tinysville is my
+                                chance to show the world who I am as a developer.
+                            </p>
+
+                            <img 
+                                src= "/portrait.png";
+                                class="section-logo2">
+
+                            <p>
+                                <center>
+                                Louis DiGiorno III
+                                <br>
+                                <a href="https://www.instagram.com/l_digiorno/">@l_digiorno</a>
+                            </p>
+                        </section>
+
+                        <section class="footer">
+                            <img 
+                            src= "/7seven.png";
+                            class="footer-logo"
+                            >
+                        </section>
                         `
 
-                        body.classList.add('body-main');
-                        container.classList.add('centered-content');
+                            body.classList.add('body-main');
+                            container.classList.remove('centered-content');
+                            container.classList.add('top-aligned-content');
                         break;
 
-                    case '#about':
+                    case '#press-kit':
                         content.innerHTML = 
                         `
+                        <section class="section">
 
-                        <p><a class="topText">Hi!</a></p>
+                            <img 
+                            src= "/tinysville-logo.png"; class="section-logo"
+                            >
 
-                        <div class="textjustify">
-                            I'm Lou from 7SevenStudios, a game enthusiast based in New York. I'm currently working on 
-                            a revamp of one of my most popular games, Town of Tinysville, a strategic city-building roguelike.
-                            <br>Release date on Steam TBD.
-                        </div>
-                        <br>
-
-                        <p><a class="subtitle">Accolades</a></p>
-                        <div class="textjustify">
-                            <b> Github Gameoff 2021</b> [<a href="https://github.blog/open-source/gaming/top-entries-from-game-off-2021/">VIEW</a>]<br>
-                            In under a month, I was tasked with creating a full video game with the theme 'bug' and placed 4th out of 8,000 participants.
-                            This is how Doorframe OZ was born, a pseudo-simulation of a late 90's computer
-                            infected with a virus that has to be cleared out before your computer crashes!<br>
-                        </div><br><br>
-                        
-                        <div class="textjustify">
-                            <b> Itch.io Games</b> [<a href="https://7sevenstudios.itch.io/">VIEW</a>]<br>
-                            Since 2020, I've participated in numerous game jams, and have published over 10 games
-                            on my  itch.io page. Over the years, I've amassed over 6,500+ web plays and 300+ downloads. <br><br>
-                        </div>
-                        <br>
-
-                        <p><a class="subtitle">Languages</a></p>
-                        <div class="textcenter"> C#, Java, JavaScript, HTML, CSS, GDScript </div>
-
-                        <p><a class="subtitle">Tools</a></p>
-                        <div class="textcenter"> Unity, Godot, Aseprite, Git, Visual Studio </div>
-
-                        <p><a class="subtitle">Fields</a></p>
-                        <div class="textcenter"> Game Design, Programming, 2D Art & Animation, Audio Design, UI Design, QA/Testing</div>
+                            <img 
+                                src= "/press kit.png";
+                                class="section-logo">
+                        </section>
                         `
                         body.classList.add('body-main');
-                        container.classList.add('centered-content');
-                        break;
-
-                    case '#games':
-                        content.innerHTML = 
-                        `
-                            <p><a class="topText">Games</a><br> [<a href="https://7sevenstudios.itch.io/">VIEW ALL ></a>]</p>
-                        <div class="textcenter">Check out some of my most popular web games with 6,500+ plays and 300+ downloads.</div>
-
-                        <a href="https://7sevenstudios.itch.io/the-human-connection"> <button class="squarebutton humanconnectionbutton"> </button></a>
-                        <a href="https://7sevenstudios.itch.io/freds-floats"> <button class="squarebutton fredsfloatsbutton"> </button></a>
-                        <a href="https://7sevenstudios.itch.io/town-of-tinysville"> <button class="squarebutton cavesofmadnessbutton"> </button></a>
-                        `
-                        body.classList.add('body-main');
-                        container.classList.add('centered-content');
-                        break;
-                        
-                    case '#fpbrawl':
-                        content.innerHTML = `
-                        <p><a class="topText">FP Ultimate Brawl</a></p>
-                        <div class="textcenter">Sponsored by Fordham Preparatory School in the Bronx, NY. Currently a work in progress. <br> [DOESN'T LOAD ON MOBILE DEVICES!]
-                        <div class="iframe-container"> <iframe src="https://itch.io/embed-upload/14243969?color=333333" allowfullscreen></iframe></div>`;
-                        body.classList.add('body-fpbrawl');
-                        container.classList.add('centered-content');
-                        break;
-                        
-                    case '#social':
-                        content.innerHTML = `
-                        <p><a class="topText">Contact</a></p>
-                        <div class="textjustify">You can find me on most social media platforms. Feel free to check out the content on my channel,
-                            although I focus more on my work than my videos, so there isn't much there.</div><br>
-
-                        <a href="mailto: 7.sevens.studios@gmail.com"> <button class="button emailbutton"> </button></a>
-                        <a href="https://www.youtube.com/channel/UCznG3BvnrdpHHKTfCdk4Zkw"> <button class="button ytbutton"> </button></a>
-                        <a href="https://x.com/7Seven_Studios"> <button class="button xbutton"> </button></a>
-                        <a href="https://7sevenstudios.itch.io/"> <button class="button itchbutton"> </button></a>`
-                        body.classList.add('body-main');
-                        container.classList.add('centered-content');
+                        container.classList.remove('centered-content');
+                        container.classList.add('top-aligned-content');
                         break;
                 }
             }
