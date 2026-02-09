@@ -19,42 +19,6 @@
     scrollbar-width: none;  /* Firefox */
 }
 
-/*top bar*/
-.topnav {
-  background-color: #222222;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  z-index: 5;
-}
-
-/*text decorations inside buttons*/
-.topnav a {
-  display: block;
-  display: inline-block;
-  color: #c9c9c9;
-  text-align: lef;
-  padding: 14px 54px;
-  text-decoration: none;
-  font-size: 15px;
-  flex: 1 1 auto;
-  max-width: 90px;
-}
-
-/* color when hovering*/
-.topnav a:hover {
-  background-color: #868282;
-  color: black;
-}
-
-/*color when selected*/
-.topnav a.active {
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
-
 .topText{
   font-size: 1.6em;
   font-weight: bold;
@@ -193,6 +157,7 @@
 
 /* INFO SECTIONS */
 .section {
+    font-size: 1.2em;
     max-width: 50vw;
     margin: 0 auto;
     padding: 50px 20px;

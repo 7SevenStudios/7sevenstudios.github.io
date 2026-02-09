@@ -55,13 +55,7 @@
         }
 
         .header a:hover {
-            background-color: #939393;
-            color: rgb(26, 26, 26);
-        }
-
-        .header a.active {
-            font-weight: bold;
-            color: white;
+            color: rgb(152, 152, 152);
         }
 
         .header-right {
@@ -70,86 +64,17 @@
             padding-right: 1vw;
         }
 
-        /*i gotta clean this up in the future*/
-        .body-main{ /*bg*/
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .body-fpbrawl{ /*bg*/
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
         /*header height, changed later */
         :root {
             --header-height: 60px;
         }
-
-         /*all the stuff is in this*/
-        .container {
-            align-items: center;
-            flex:1;
-            overflow-y: auto; /* Scroll vertically if content overflows */
-            display: flex;
-            flex-direction: column; /* Stack children vertically */
-            justify-content: flex-start; /* Align items to the top */
-        }
-
-        /*text for containers*/
-        .textjustify{
-            text-align: justify;
-        }
-
-        .text{
-            font-size: 1.5em;
-            width: 60%;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
         
-        .text2{
-            font-size: 1.1em;
-            width: 60%;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
-
-        .iframe-container { /*FP BRAWL IFRAME*/
-            width: 104%;
-            height: 630px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            margin: 0 auto; 
-            margin-left: -2%;
-        }
-
         iframe {
             width: 960px;
             height:900px;
             margin: 0 auto; 
             border: none;
             display: block;
-        }
-
-        .centered-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 80vh;
-            text-align: center;
-        }
-
-        .top-aligned-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            box-sizing: border-box;
         }
 
         @media screen and (max-width: 720px) {
@@ -166,26 +91,6 @@
             
             .header-right {
                 float: left;
-            }
-
-            .textjustify{
-                text-align: center;
-            }
-
-            .text{
-                font-size: 1.5em;
-                width: 90%;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
-            }
-            
-            .text2{
-                font-size: 1em;
-                width: 90%;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
             }
         }
 
