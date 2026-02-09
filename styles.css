@@ -9,6 +9,8 @@
     font-style: normal;
     color: rgb(247, 243, 243);
 
+    margin: 0;
+
     scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
