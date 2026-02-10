@@ -45,6 +45,14 @@
 /* HERO LANDING */
 .hero {
     height: 100vh;
+    padding-top: calc(var(--header-height) + clamp(16px, 4vh, 48px));
+    padding-bottom: clamp(16px, 4vh, 48px);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    overflow: hidden;
     width: 100vw;
     margin-left: calc(50% - 50vw);
     background-image: url("/tinysvillewide.png");
@@ -52,9 +60,6 @@
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .hero::before {
@@ -68,13 +73,26 @@
     position: relative;
     z-index: 1;
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: clamp(12px, 2vh, 28px);
+
+    width: 100%;
+    max-width: 1200px;
 }
 
 .hero-logo {
-    max-width: 1300px;
-    width: 80vw;
-    margin-bottom: 100px;
-    image-rendering: auto;
+
+max-height: 20vh;
+    max-width: 85vw;
+    width: auto;
+
+    margin-top: 0;
+
+    object-fit: contain;
 }
 
 .footer {
@@ -100,12 +118,29 @@
 
 /* TRAILER */
 .trailer {
-    width: 70vw;
-    max-width: 960px;
+    width: auto;
+    height: 40vh;
+    max-width: 90vw;
     aspect-ratio: 16 / 9;
-    height:auto;
+
     border: none;
     box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+@media (max-aspect-ratio: 4/5) {
+
+    .hero {
+        padding-top: 150px;
+        padding-bottom: 80px;
+    }
+
+    .trailer {
+        max-height: 45vh;
+    }
+
+    .hero-logo {
+        width: 90vw;
+    }
 }
 
 .sectiontrailer {
@@ -123,7 +158,8 @@
     gap: 16px;
 
     padding: 14px 24px;
-    margin-top: 28px;
+    margin-top: 0;
+    transform: scale(clamp(0.85, 1vw, 1));
 
     background: #080431;
     color: #ffffff;
@@ -197,4 +233,23 @@
     margin-top:50px;
     font-size: 1.5em;
     margin-bottom: 20px;
+}
+
+#tinysville {
+    position: relative;
+    padding-top: 80px; /* make room for the divider */
+}
+
+#tinysville::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100vw;
+    height: 16px;
+    background: #24264e;
+
+    border-radius: 3px;
 }
