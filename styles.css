@@ -94,7 +94,7 @@ max-height: 20vh;
     height: 55.5vh;
     width: 100vw;
     margin-left: calc(50% - 50vw);
-    background-image: url("/7sevenpagebottom.png");
+    background-image: url("/pagebottom.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
