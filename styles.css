@@ -203,7 +203,7 @@ max-height: 20vh;
 /* INFO SECTIONS */
 .section {
     font-size: 1.2em;
-    max-width: 60vw;
+    max-width: 40vw;
     margin: 0 auto;
     padding: 50px 20px;
     text-align: left;
@@ -368,4 +368,17 @@ iframe {
         text-align: center;  
         width: fit-content; 
     }
+}
+
+.key-art-grid {
+    column-count: 3;
+    column-gap: 5px;
+}
+
+.key-art-grid img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    break-inside: avoid;
 }
